@@ -1,0 +1,45 @@
+.topbar{
+	background-color: lightblue;
+	width:auto;
+	height:100px;
+}
+ul {
+    list-style-type: none;
+    
+    padding: 10px 20px;
+    overflow: hidden;
+    background-color:lightblue;
+}
+li {
+    float: right;
+    font-size:22px;
+    font-family: "Lobster", serif;
+
+
+}
+.xyz{
+	margin-top:20px;
+}
+.button {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    font-family:verdana;
+    cursor: pointer;
+}
+.logo{
+	font-family: "Lobster", serif;
+	font-size: 80px;
+	  font-weight: bold;
+}
+button:hover {
+    background-color: white;
+    color: black;
+    border-radius: 0%;
+}

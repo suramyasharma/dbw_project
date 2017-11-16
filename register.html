@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register Page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="registerstyle.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+  <script type="text/javascript">
+    function validate_register_form(){
+      var xFname= document.forms["register_form"]["First_Name"].value;
+      var xUname= document.forms["register_form"]["Username"].value;
+      var xMnum= document.forms["register_form"]["mobile_num"].value;
+      if(xFname==""){
+        alert("First Name is required");
+        return false;
+      }
+      if(xUname==""){
+        alert("Username is required");
+        return false;
+      }
+      if(xMnum==""){
+        alert("Mobile number is required");
+        return false;
+      }
+      console.log('this is executing');
+      return true;
+    }
+  </script>
+
+</head>
+<body>
+	<div class="mainbox">
+	<div class="box">
+		<div class="upperbox">
+			Register
+		</div>
+		<div class="lowerbox">
+			<form action="insert_into_database.php" method="POST" name="register_form" onsubmit="return validate_register_form()">
+        
+			<div class="First_Name">
+                              &nbsp;&nbsp;&nbsp;&nbsp;First Name<br><br>
+                              <center><input type="text" placeholder="  Enter your First Name" id="First_Name" name="First_Name">
+                          
+                              </center>
+             </div><br>
+             <div class="Last_Name">
+                              &nbsp;&nbsp;&nbsp;&nbsp;Last Name<br><br>
+                              <center><input type="text" placeholder="  Enter your Last Name" id="Last_Name" name="Last_Name">
+                              </center>
+              </div><br>
+              <div class="Username">
+                              &nbsp;&nbsp;&nbsp;&nbsp;Username<br><br>
+                              <center><input type="text" placeholder="  Enter a unique Username" id="Username" name="Username">
+                                
+                              </center>
+               </div><br>
+               <div class="mobile_num">
+               					&nbsp;&nbsp;&nbsp;&nbsp;Mobile Number<br><br>
+                              <center><input type="text" placeholder="  Enter your mobile number" id="mobile_num" name="mobile_num">
+                                
+                              </center>
+               	
+               </div><br>
+
+             <div class="password">
+                              &nbsp;&nbsp;&nbsp;&nbsp;Password<br><br>
+                              <center><input type="password" placeholder=" Create a password" id="password" name="loginpass"></center>
+                              </div><br><br>
+                              <div id="login-btn">
+                              <input type="submit" name="submit" id="btn-login" value="Login">
+                              </div>
+                          </form>
+                      </div>
+</body>
+</html>
